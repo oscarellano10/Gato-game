@@ -1,6 +1,6 @@
 # Gato-game
 
-El juego que he seleccionado para este proyecto es el juego de gato. Se me hace un juego interesante que de cara es simple pero ya tomando un paso atras se vuelve un poco más complejo. Como ya tengo previos conocimiento escribiendo código con Python me gustaría usar esos conocimientos y involucrar un aspecto gráfico al juego usando la librería de Turtle.
+El juego que he seleccionado para este proyecto es el juego de gato. Se me hace un juego interesante que se ve simple pero ya tomando un paso atras se vuelve un poco más complejo. Como ya tengo previos conocimiento escribiendo código con Python me gustaría usar esos conocimientos y involucrar un aspecto gráfico al juego usando la librería de Turtle.
 
 Antes de empezar con el algoritmo, voy a explicar la estructura del código. Usando 2 listas voy a basarme en todo el código. La primera lista sería una donde se establece el estado de cada cuadro del gato. Sería algo asi, ["-","-","-"]. Esto representa la fila de arriba del gato. La segunda lista que estructura el código es uno con coordenadas. Usando el ejemplo de la primera fila del gato, la lista quedaría como, [(-200, 200),(0, 200),(200, 200)]. Usando tupels puedo hacer una lista coon coordenadas facilmente. Ahora que ya tenemos la estructura del código definido, podemos empezar con el algoritmo.
 
