@@ -64,6 +64,9 @@ def make_board():
    for i in range(0, 9):
        add_number(i)
    print(numbers)
+   if rounds % 2 != 0:
+       check_center()
+   screen.update()
 
 
 # Utilizando turtles, agrega los numeros en cada seccion del board
@@ -86,6 +89,7 @@ def clear_board():
    global crosses
    screen.update()
    time.sleep(1)
+   write_tactic(grid, rounds)
    turns = 0
    grid = ['-', '-', '-', '-', '-', '-', '-', '-', '-']
    rounds += 1
@@ -368,6 +372,16 @@ def check_availability(shape):
        print(f"{shape} wins!")
        clear_board()
 
+def write_tactic(grid, round):
+    file = open("victories.txt", "a")
+    file.write(f"\nRound {round + 1} \n")
+    for i in range(len(grid)):
+        value = f"{grid[i]} "
+        if i == 2 or i == 5 or i == 8:
+            value += "\n"
+        file.write(value)
+    file.close()
+
 
 # Funciones para los inputs del usuario.
 def add_x_0():
@@ -434,8 +448,9 @@ def add_x_8():
    screen.update()
    make_x(8)
 
-
-
+# Quitando el contenido del archivo
+file = open("victories.txt", "w")
+file.write("")
 
 make_board()
 screen.listen()
